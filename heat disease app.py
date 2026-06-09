@@ -90,11 +90,14 @@ Explanation :
 interface = gr.Interface(
     fn=predict_heart_disease,
     inputs=gr.Image(type="numpy"),
-    outputs="text",
+    outputs=gr.Textbox(lines=15, label="Prediction Result"),
     title="❤️ AI Medical Chatbot - Heart Disease Prediction",
     description="""
 Upload a heart-related medical image (ECG/X-ray/MRI).
 
+The AI model predicts possible heart disease and provides an explanation.
+"""
+)
 The AI model predicts possible heart disease and provides an explanation.
 """
 )
